@@ -22,7 +22,6 @@ services:
   frontend:
     env_file: .env
     image: euggross/kittygram_frontend
-    command: cp -r /app/build/. /static/
     volumes:
       - static:/static
   gateway:
