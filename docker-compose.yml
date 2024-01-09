@@ -15,8 +15,10 @@ services:
     image: euggross/kittygram_backend
     env_file: .env
     volumes:
-      - static:/backend_static
-      - media:/media
+      - static:/backend_static/
+      - media:/media/
+    depends_on:
+      - db
   frontend:
     env_file: .env
     image: euggross/kittygram_frontend
